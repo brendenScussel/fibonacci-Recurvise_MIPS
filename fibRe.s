@@ -48,11 +48,11 @@ fib:
 
 	beq		$t0, $a0, return0	#if $a0 == 0 then return
 	beq		$t1, $a0, return0	#if $a0 == 1 then return
-	bge		$a0, $t0, fib_recurse	# branch if input is >= 2
+	bge		$a0, $t2, fib_recurse	# branch if input is >= 2
 	
 	return0: add 	$v0, $a0, $zero
 	jr $ra
-	j errExit					#bs20250223
+	j exit					#bs20250223
 
 
 fib_recurse:
